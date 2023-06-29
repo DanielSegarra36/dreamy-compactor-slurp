@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Layout using Tables</title>
+  <style>
+    /* h1 {display:inline-block;}
+      sup a {position: absolute;} */
+  </style>
+</head>
+
+<body>
+  <h1>HTML Layout using Tables</h1>
+  <sup>
+    <a
+      href="https://www.tutorialspoint.com/html/html_layouts.htm#:~:text=HTML%20Layout%20%2D%20Using%20Tables,in%20whatever%20way%20you%20like.">
+      [1]
+    </a>
+  </sup>
+
+  <p>
+    This is an outdated approach.
+    CSS used to be even more painful to work with (can you believe that?)
+    So people would use tables as layout tools since cells line up perfectly and can stretch down and across as well.
+  </p>
+
+  <table width="100%" border="0">
+
+    <tr>
+      <td colspan="2" bgcolor="#b5dcb3">
+        <h1>This is Web Page Main title</h1>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td bgcolor="#aaa" width="50">
+        <b>Main Menu</b><br />
+        HTML<br />
+        PHP<br />
+        PERL...
+      </td>
+
+      <td bgcolor="#eee" width="100" height="200">
+        Technical and Managerial Tutorials
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" bgcolor="#b5dcb3">
+        <center>
+          Copyright © 2007 Tutorialspoint.com
+        </center>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
