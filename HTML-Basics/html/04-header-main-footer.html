@@ -1,0 +1,57 @@
+<!-- This self-closing tag (no second closing tag)
+    works as a label to tell the browser the file type -->
+<!DOCTYPE html>
+
+<!-- This will ALWAYS be the first tag -->
+<html lang="en">
+  <head>
+    <title>Header, Main, Footer</title>
+    <meta name="color-scheme" content="dark light" />
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+
+  <body style="border: black 5px solid">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role -->
+    <header style="border: blue 5px solid">
+      <!-- NAV BAR -->
+<nav>
+    <h1>Intro to HTML</h1>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="01-head-tag.html">Head Tag</a></li>
+      <li><a href="02-text.html">Text</a></li>
+      <li><a href="03-comments.html">Comments</a></li>
+      <li><a href="04-header-main-footer.html">Header Main Footer</a></li>
+      <li><a href="05-article-section-div.html">Article</a></li>
+      <li><a href="06-media.html">Media</a></li>
+      <li><a href="../css/flexbox.html">Flexbox</a></li>
+    </ul>
+  </nav>
+    </header>
+
+    <main style="border: red 5px solid">
+      <p>We are now in the main tag</p>
+      
+      <article style="border: green 5px solid">
+        <p>We are now in the article tag</p>
+        <header style="border: purple 5px solid">
+          <h2>Using Header within Main</h2>
+          <img src="https://placekitten.com/200/300" alt="kitten-image">
+          <p>
+            Posted on Wednesday,
+            <time datetime="2022-7-16">16 July 2022</time> by Jo Dough
+          </p>
+        </header>
+        <p>This comes directly after the header</p>
+        <p>
+          <a href="https://example.com/page">Continue reading....</a>
+        </p>
+      </article>
+    </main>
+    <footer style="border: orange 5px solid">
+      <p>We are now in the footer tag</p>
+      <p>&lt;&lt;&lt; &copy; <a href="about.html">Jo Dough</a> &gt;&gt;&gt;</p>
+    </footer>
+  </body>
+</html>

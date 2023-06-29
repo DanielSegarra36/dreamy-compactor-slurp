@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Text in HTML</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <meta name="color-scheme" content="dark light" />
+</head>
+
+<body>
+  <nav>
+    <h1>Intro to HTML</h1>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="01-head-tag.html">Head Tag</a></li>
+      <li><a href="02-text.html">Text</a></li>
+      <li><a href="03-comments.html">Comments</a></li>
+      <li><a href="04-header-main-footer.html">Header Main Footer</a></li>
+      <li><a href="05-article-section-div.html">Article</a></li>
+      <li><a href="06-media.html">Media</a></li>
+      <li><a href="../css/flexbox.html">Flexbox</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>HTML TEXT BASICS</h1>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <p>this is paragraph text</p>
+
+    <p>you can use the em tag to make words <em>italicized</em>.</p>
+
+    <p>you can use the strong tag to make words <strong>bold</strong>.</p>
+
+    <p>
+      <s> this is secret text </s>
+    </p>
+
+    <p>Check out <a href="https://www.theurbanwild.us/">The Urban Wild</a>.</p>
+
+    <p>
+      you can use <a href="#"># (pound/hashtag)</a> as a placeholder for the tag
+      to work.
+    </p>
+
+    <p>
+      you can use the attribute target="_blank" to
+      <a href="#" target="_blank">open in a new tab</a>
+    </p>
+
+    <h2>Unordered List</h2>
+    <ul>
+      <li>juice</li>
+      <li>diapers</li>
+      <li>new spatula</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+      <li>mix eggs with sugar</li>
+      <li>add milk, vanilla, and flour</li>
+      <li>bake at 350 degrees F for about 45mins</li>
+    </ol>
+
+    <h2>Nested List</h2>
+    <ol>
+      <li>Remove the skin from the garlic, and chop coarsely.</li>
+      <li>
+        Remove all the seeds and stalk from the pepper, and chop coarsely.
+      </li>
+      <li>Add all the ingredients into a food processor.</li>
+      <li>
+        Process all the ingredients into a paste.
+        <ul>
+          <li>
+            If you want a coarse "chunky" hummus, process it for a short time.
+          </li>
+          <li>If you want a smooth hummus, process it for a longer time.</li>
+        </ul>
+      </li>
+    </ol>
+
+
+    <h2>Description Lists</h2>
+    <dl>
+      <dt>First</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sint
+        iste! Provident et aliquid ratione eligendi, error delectus quas quis
+        dolorem tempora? Velit porro sapiente sequi. Accusantium praesentium
+        culpa eaque.
+      </dd>
+      <dt>Second</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sint
+        iste! Provident et aliquid ratione eligendi, error delectus quas quis
+        dolorem tempora? Velit porro sapiente sequi. Accusantium praesentium
+        culpa eaque.
+      </dd>
+      <dt>Third</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sint
+        iste!
+      </dd>
+      <dd>a second definition cause languages be like that.</dd>
+    </dl>
+
+
+    <h2>Contact Info</h2>
+    <address>
+      <p>
+        Jo Dough <br />
+        420 Cash Lane <br />
+        Somewhere NA 00000
+      </p>
+      <ul>
+        <li>Tel: 01234 567 890</li>
+        <li>Email: me@grim-north.co.uk</li>
+      </ul>
+    </address>
+
+
+    <h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#citations"
+        target="_blank" rel="noopener noreferrer">Quoting and Citing</a>
+    </h2>
+    <p>Here is a blockquote:</p>
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+      <p>
+        The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+        <em>HTML Block Quotation Element</em>) indicates that the enclosed text
+        is an extended quotation.
+      </p>
+    </blockquote>
+
+    <p>
+      According to the
+      <a href="/en-US/docs/Web/HTML/Element/blockquote">
+        <cite>MDN blockquote page</cite></a>:
+    </p>
+
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+      <p>
+        The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+        <em>HTML Block Quotation Element</em>) indicates that the enclosed text
+        is an extended quotation.
+      </p>
+    </blockquote>
+
+    <p>
+      The quote element — <code>&lt;q&gt;</code> — is
+      <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended for short quotations that don't
+        require paragraph breaks.</q>
+      — <a href="/en-US/docs/Web/HTML/Element/q"> <cite>MDN q page</cite></a>.
+    </p>
+
+    <h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#superscript_and_subscript"
+        target="_blank" rel="noopener noreferrer">Superscript and subscript</a>
+    </h2>
+    <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+    <p>
+      Caffeine's chemical formula is
+      C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+    </p>
+    <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+  </main>
+</body>
+
+</html>

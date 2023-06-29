@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media in HTML</title>
+    <meta name="color-scheme" content="dark light" />
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+    <h1>Intro to HTML</h1>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="01-head-tag.html">Head Tag</a></li>
+      <li><a href="02-text.html">Text</a></li>
+      <li><a href="03-comments.html">Comments</a></li>
+      <li><a href="04-header-main-footer.html">Header Main Footer</a></li>
+      <li><a href="05-article-section-div.html">Article</a></li>
+      <li><a href="06-media.html">Media</a></li>
+      <li><a href="../css/flexbox.html">Flexbox</a></li>
+    </ul>
+  </nav>
+    <main>
+      <article>
+        <h1>Working with Images in HTML</h1>
+        <!--  -->
+        <!-- <section>
+          <h1>Title</h1>
+          <img src="" alt="" />
+        </section> -->
+
+        <!-- Image from Website -->
+        <section id="Image from Website">
+          <h2>Image from Website</h2>
+          <p>This is my first web page.</p>
+          <img
+            src="https://source.unsplash.com/random/300x300"
+            alt="random image from unsplash"
+            title="Random Image"
+            width="300"
+            height="300"
+          />
+        </section>
+
+        <!-- Image from File -->
+        <section id="Image from File">
+          <h2>Image from File</h2>
+          <p>This is my first web page.</p>
+          <img
+            src="image.png"
+            alt="image from local file (alt text if image not found)"
+            title="local image"
+          />
+        </section>
+
+        <!-- Image as Figure with Caption -->
+        <section id="Image as Figure with Caption">
+          <h2>Image as Figure with Caption</h2>
+          <figure>
+            <img
+              src="https://source.unsplash.com/random/300x300"
+              alt="random image from unsplash"
+              title="Random Image"
+              width="300"
+              height="300"
+              loading="lazy"
+            />
+            <figcaption>A Random Picture</figcaption>
+          </figure>
+        </section>
+
+        <!-- iFrame with YouTube -->
+        <section>
+          <h1>iFrame</h1>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </section>
+
+        <!-- SVG -->
+        <section>
+          <h1>SVG</h1>
+          <p>You can import an svg from figma as well!</p>
+          <figure>
+            <img src="/assets/copy-as-svg.png" alt="an example of copying an item from Figma as an SVG to directly drop into your HTML." width="680">
+            <figcaption>Right click any object in Figma and you can copy it as an SVG. Simply copy and paste into you HTML.<em>(sadly this does not work in firefox at the moment, the app and chrome version work fine)</em></figcaption>
+          </figure>
+          <svg
+            width="56"
+            height="54"
+            viewBox="0 0 56 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24.6248 3.5545C25.3742 -0.120792 30.6258 -0.120793 31.3752 3.5545C31.938 6.31493 35.3962 7.2692 37.295 5.18804L37.6298 4.82101C40.1035 2.10977 44.5096 4.77111 43.261 8.22235C42.3099 10.8513 44.804 13.4215 47.4603 12.5498L47.9384 12.3929C51.3755 11.2651 53.8344 15.7214 51.0475 18.0277C48.9061 19.7998 49.8104 23.2664 52.5436 23.7718C56.1229 24.4338 56.1229 29.5662 52.5436 30.2282C49.8104 30.7336 48.9061 34.2002 51.0475 35.9723C53.8344 38.2786 51.3755 42.7349 47.9384 41.6071L47.4603 41.4502C44.804 40.5785 42.3099 43.1487 43.261 45.7777C44.5096 49.2289 40.1035 51.8902 37.6298 49.179L37.295 48.812C35.3962 46.7308 31.938 47.6851 31.3752 50.4455C30.6258 54.1208 25.3742 54.1208 24.6248 50.4455C24.062 47.6851 20.6038 46.7308 18.705 48.812L18.3702 49.179C15.8965 51.8902 11.4904 49.2289 12.739 45.7777C13.6901 43.1487 11.196 40.5785 8.5397 41.4502L8.0616 41.6071C4.62447 42.7349 2.16562 38.2786 4.95252 35.9723C7.09388 34.2002 6.18958 30.7336 3.4564 30.2282C-0.122928 29.5662 -0.122928 24.4338 3.4564 23.7718C6.18958 23.2664 7.09388 19.7998 4.95252 18.0277C2.16562 15.7214 4.62447 11.2651 8.0616 12.3929L8.5397 12.5498C11.196 13.4215 13.6901 10.8513 12.739 8.22235C11.4904 4.77111 15.8965 2.10976 18.3702 4.82101L18.705 5.18803C20.6038 7.26919 24.062 6.31493 24.6248 3.5545Z"
+              fill="#8B1B1B"
+            />
+          </svg>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
