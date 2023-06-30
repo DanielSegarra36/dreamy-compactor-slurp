@@ -1,0 +1,48 @@
+/*
+  Styled using Prettier
+  https://prettier.io/playground/
+*/
+
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  background-image: url("https://source.unsplash.com/random/780x400/?space");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  position: relative;
+  top: 100px;
+  height: 50vh;
+  width: 100vw;
+  background-image: url("https://source.unsplash.com/random/800x800/?cat");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+section {
+  max-width: 700px;
+  margin: 0px auto;
+}
+
+p {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  /*
+    https://clamp.font-size.app/ 
+    Minimum viewport width: 50px
+    Maximum viewport width: 900px
+    Minimum font size:      1rem
+    Maximum font size:      3rem
+  */
+  font-size: clamp(1rem, 0.8824rem + 3.7647vw, 3rem);
+  /*! height: 200px; */
+  margin: auto 0px;
+}

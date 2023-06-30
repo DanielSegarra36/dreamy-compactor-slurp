@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CSS Transitions</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Philosopher&family=Sora:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1 class="change">CSS Transitions</h1>
+    <h3>Hover over and off the boxes to see the effects</h3>
+
+    <div class="animate">shjafbjah</div>
+
+    <!-- Transition of background color -->
+    <h2>transition: background-color 300ms ease-in;</h2>
+    <div class="box box1"></div>
+
+    <!-- Transition of background color and 360 spin -->
+    <h2>transition: background-color, transform 300ms ease-in;</h2>
+    <div class="box box2"></div>
+
+    <!-- Transition of background color and 360 spin with custom timing (bezier) -->
+    <h2>Separate Transitions Written in One Line</h2>
+    <p>here we have:</p>
+    <p>transition-duration: 300ms, 3s;</p>
+    <p>transition-property: background-color, transform;</p>
+    <p>transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);</p>
+    <div class="box box3"></div>
+
+    <!-- One Transition Followed by Another -->
+    <h2>One Transition Followed by Another</h2>
+    <div class="box box4"></div>
+
+    <!-- Animation -->
+    <h2>Animating</h2>
+    <div class="box box5"></div>
+
+    <!-- Animation -->
+    <h2>Animating on Actions (hover)</h2>
+    <div class="box box6"></div>
+  </body>
+</html>

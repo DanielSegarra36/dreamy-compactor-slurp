@@ -1,0 +1,165 @@
+/**************  GLOBAL PROPERTIES  **************/
+
+body {
+  margin: 50px 30px;
+  overflow: auto;
+}
+
+main, article, section {
+  display: contents;
+}
+
+.box {
+  color: black;
+}
+
+
+/**************  DISPLAY PROPERTY EXAMPLES  **************/
+.display-inline {
+  background-color: #83d178;
+  display: inline;
+}
+.display-block {
+  background-color: #adadeb;
+  display: block;
+}
+.display-none {
+  background-color: #ebc1ad;
+  /*! display: none; */
+}
+
+
+/**************  POSITION PROPERTY EXAMPLES  **************/
+.position-static {
+  position: static;
+  background-color: coral;
+}
+.position-relative {
+  position: relative;
+  left: 50%;
+  width: 50%;
+  background-color: #d6abff;
+  top: -50px;
+}
+
+.position-sticky {
+  width: 50%;
+  top: 30%;
+  position: sticky;
+  background-color: #fcff94;
+}
+.position-fixed {
+  position: fixed;
+  bottom: -10px;
+  right: 0px;
+}
+.fixed-style {
+  display: inline;
+  background-color: #84c6ff;
+  padding: 5px 10px;
+  border: green 5px solid;
+}
+
+.parent {
+  background: aquamarine;
+  width: 75vw;
+  padding: 1em;
+  /*   position: relative; */
+  margin: 0px auto;
+}
+
+.child {
+  background: red;
+  position: absolute;
+
+  /*  Absolute positioning with a basic size  */
+  width: 50px;
+  height: 50px;
+
+  /*  Extend from all corners extactly 25% of the view distance  */
+  /*   top: 25vw;
+  bottom: 25vw;
+  left: 25vw;
+  right: 25vw; */
+
+  /*  Stretch top to bottom, start left and extend 60% of view width  */
+  /*   top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 60vw; */
+
+  /*  Stretch left to right, start from bottom and extend 40% of view height up  */
+  /*   left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 40vh; */
+
+  /*  Move red container behind the document  */
+  /*   z-index: -1; */
+}
+
+.rogue-absolute {
+  width: 200px;
+  position: absolute;
+  bottom: -120px;
+  left: 20%;
+}
+.rogue-absolute-style:hover {
+  color: red;
+}
+.rogue-absolute-style {
+  background-color: #7fffd4c4;
+  padding: 5px 10px;
+  border: red 3px solid;
+  color: black;
+  font-weight: bold;
+  word-spacing: 2px;
+}
+
+
+/**************  ABSOLUTE POSITIONING USE CASE EXAMPLES  **************/
+.card {
+  position: relative;
+  /*  If you comment out image  */
+  /* background-color: rgb(105, 105, 105); */
+  background-image: url("https://unsplash.it/250");
+  background-size: cover;
+
+
+  /* center if only one card */
+  /* give element a width */
+  /* make the margin 0 for top and bottom */
+  /* give auto margin to left and right which should center it */
+  width: 250px;
+  margin: 0 auto;
+}
+
+.card-body {
+  position: relative;
+  background:rgba(0, 0, 0, .5);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.card-title::before {
+  content: "";
+  position: absolute;
+  background: yellow;
+/*   border: 5px solid red; */
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -2rem;
+  z-index: -1;
+}
+.card-title {
+  position: relative;
+  color: black;
+  z-index: 1;
+  padding-top: 5px;
+}
+
+.card-content {
+  color: white;
+}

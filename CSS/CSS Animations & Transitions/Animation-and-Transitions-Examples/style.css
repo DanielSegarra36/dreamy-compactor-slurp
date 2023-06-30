@@ -1,0 +1,165 @@
+/* center ONE element horizontally */
+section {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+}
+
+/********************************/
+/********** EXAMPLE  1 **********/
+/********************************/
+h1 {
+  width: fit-content;
+  padding: 3rem;
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/********************************/
+/********** EXAMPLE  2 **********/
+/********************************/
+.doubleTransition {
+  transition: font-size 3s linear, color 2s ease-in-out;
+}
+
+.doubleTransition:hover {
+  color: red;
+  font-size: 42px;
+  transition: font-size 1s cubic-bezier(.19,1,.22,1);
+}
+
+
+/********************************/
+/********** EXAMPLE  3 **********/
+/********************************/
+.draw-button {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: none;
+}
+
+.draw-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-top: 2px solid transparent;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.draw-button:hover::before {
+  width: 100%;
+  height: 100%;
+  transition:
+    width 0.3s ease-in-out 0.3s,
+    height 0.3s ease-in-out 0.6s,
+    border-color 0.3s ease-in-out;
+  border-right-color: #000000;
+  border-top-color: #000000;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.draw-button:hover {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  transition: border-top 0.3s linear, border-left 0.3s linear;
+}
+
+/********************************/
+/********** EXAMPLE  4 **********/
+/********************************/
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in-out 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/********************************/
+/********** EXAMPLE  5 **********/
+/********************************/
+
+.slide-in {
+  position: relative;
+  left: -100px;
+  animation: slideIn 0.5s ease-in forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/********************************/
+/********** EXAMPLE  6 **********/
+/********************************/
+
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/********************************/
+/********** EXAMPLE  7 **********/
+/********************************/
+
+.bounce {
+  position: relative;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -20px;
+  }
+  50% {
+    top: 0;
+  }
+  75% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}

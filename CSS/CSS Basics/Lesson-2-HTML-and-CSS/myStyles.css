@@ -1,0 +1,44 @@
+
+/* TURN H1 and A RED */
+
+.classA {
+  color: blue;
+  font-size: 75px;
+}
+
+.classB: {
+  font-size: 64px;
+  color: black
+}
+
+body {
+  color: magenta;
+}
+
+#ORANGE {
+  color: orange;
+}
+
+a:hover {
+  font-size: 32px;
+}
+
+a::after {
+  content: 'KJHFDKJFHKADJHFK';
+}
+
+a::first-letter {
+  font-size: 96px;
+}
+
+button:not(.noStyle) {
+  /* styling */
+}
+
+p:nth-child(3),
+p:nth-child(8) {
+  font-size: 32px;
+}
+
+
+

@@ -1,0 +1,85 @@
+@keyframes sades-animation {
+  0% {
+    background-color: blue;
+  }
+  23% {
+    background-color: coral;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+.animate {
+  /* animation: name-of-animation, duration, iteration-count, timing function */
+  animation: sades-animation 10s infinite ease-in;
+}
+
+body {
+  background-color: black;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  color: white;
+}
+
+body {
+  transition: background-color 300ms ease-in;
+}
+
+h3 {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Lemonada", cursive; */
+  /* font-family: "Sora", sans-serif; */
+  /* font-family: "Monoton", cursive; */
+  font-family: "Philosopher", sans-serif;
+}
+
+.box {
+  margin: 1rem 3rem;
+  height: 300px;
+  width: 300px;
+  background-color: rgb(133, 133, 211);
+}
+.box1 {
+  transition: background-color 300ms ease-in;
+}
+.box2 {
+  transition: background-color, transform 300ms ease-in;
+}
+.box3 {
+  transition-duration: 300ms, 3s;
+  transition-property: background-color, transform;
+  transition-timing-function: ease-in, cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+.box4 {
+  transition: 1s background-color ease-in, 500ms transform ease-out 1s;
+}
+.box5 {
+  animation: spin 4s infinite linear;
+}
+.box6:hover {
+  animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box:hover {
+  background-color: rgb(95, 134, 185);
+  transform: rotate(60deg);
+}

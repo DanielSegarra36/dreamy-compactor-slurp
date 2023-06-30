@@ -1,0 +1,51 @@
+:root {
+  --horse-filmstrip: url('https://images.ctfassets.net/i01duvb6kq77/Lh5E6NCKFSqgUOUcC20rN/a17db432d3601ce31c5c0ffccd2fd584/A_galloping_horse_and_rider.?w=1100&q=80&fm=webp') no-repeat;
+}
+
+.horse {
+  /* Crop element so that it shows only one frame */
+  width: 140px;
+  height: 90px;
+  /* Center: small margin for top/bottom and auto (equal width) to the left and right of element */
+  margin: 2em auto;
+
+  /* image as background */
+  background: var(--horse-filmstrip);
+  
+  /* The Animation (with browser compatibility)*/
+  /* animation: walk 3s steps(4) infinite forward; */
+  animation: walk 1s steps(4) infinite forwards;
+  /* -moz-animation: walk 1s steps(4) infinite forwards;
+  -webkit-animation: walk 1s steps(4) infinite forwards; */
+}
+
+@keyframes gallop {
+  100% {
+    background-position: -560px 0;
+  }
+}
+
+
+
+
+
+
+/* Keyframes (with browser compatibility) */
+@keyframes walk {
+  100% { background-position: -512px 0; }
+}
+
+@-moz-keyframes walk {
+  100% { background-position: -512px 0; }
+}
+
+@-webkit-keyframes walk {
+  100% { background-position: -512px 0; }
+}
+
+
+@media screen and (max-width: 480px) {
+  p { font-size: 1.2rem; }
+  h1 { color: red; }
+  img { display: block; margin: 1rem auto; }
+}

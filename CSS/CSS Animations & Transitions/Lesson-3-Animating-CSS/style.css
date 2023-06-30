@@ -1,0 +1,26 @@
+#unqiue {
+  font-size: 32px;
+  transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+
+#unique:hover {
+  color: red;
+  font-size: 64px;
+}
+
+p {
+  color: red;
+}
+
+#unique {
+  color: blue;
+}
+
+button {
+  transition: font-size 2s linear;
+}
+button:hover {
+  font-size: 32px;
+  transition: font-size 1s ease-in;
+}

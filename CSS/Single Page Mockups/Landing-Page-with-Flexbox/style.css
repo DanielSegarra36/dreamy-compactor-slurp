@@ -1,0 +1,196 @@
+/*
+  Styled using Prettier:
+  https://prettier.io/playground/
+  Change "parser" to "CSS" on left
+*/
+
+/* 
+  I'm being nitpicky. If you scroll down while
+  at the top there is still a default background
+  color of white. I don't like that...
+*/
+html {
+  background-color: #171717;
+  /*   by default */
+  /*   background-color: white; */
+}
+
+/* the body inherently has
+  8px margin left and right */
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+/*
+  Here we put our:
+    - nav
+    - main
+    - footer
+  in a column (top/bottom) format with flexbox.
+  We can use flex to then stretch the main content
+  to fit the remaining portion of our screen vertically.
+  We'll give rules to each portion to dictate how they should grow/shrink.
+*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  /*  We are making the nav portion a flex container as well. So it is a flex child of the body tag and now a flex parent/container for its own subelements (logo, links, collapsing menu)  */
+  display: flex;
+  flex-direction: column;
+
+  /*
+    We state that this element's position should
+    stick to the top at 0 (the very top,
+    as opposed to 200, further down).
+  */
+  position: sticky;
+  top: 0;
+  padding: 0px 30px;
+
+  /*  is this like mustard or something?  */
+  background-color: #cb8908;
+
+  /*  Here we are stating how this portion should
+  grow/shrink within the body flex container.
+  */
+  flex: 0 1 auto;
+}
+
+/* Here we use the same flex layout across multiple containers*/
+.top-nav,
+.nav-links,
+.call-to-action {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Space Between Logo and Nav Menu
+   Center across secondary axis (top/bottom)*/
+.top-nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* the list in nav (beyond 750px)*/
+.nav-links {
+  /* Remove bullet point */
+  list-style-type: none;
+  /* Even space between links */
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #670000;
+  text-decoration: underline;
+}
+
+/* Directly under nav */
+main {
+  background-image: url("https://source.unsplash.com/random/780x400/?hydroponics");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+/* Lorem Ipsum text */
+.call-to-action {
+  height: 100%;
+  background-color: rgba(140, 140, 140, 0.6);
+  padding: 50px 100px;
+
+  /*
+    https://clamp.font-size.app/
+    Minimum viewport width: 250px
+    Maximum viewport width: 900px
+    Minimum font size: 2rem
+    Maximum font size: 3rem
+  */
+  font-size: clamp(2rem, 1.6154rem + 2.4615vw, 3rem);
+
+  /*   flex props */
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+
+/* Rectangle on right side */
+.call-to-action-aside-placeholder {
+  width: 60vw;
+  height: 50vh;
+  background: #d9d9d9;
+  box-sizing: border-box;
+  border: 14px solid #000000;
+}
+
+/* 
+  You will be a flexbox container
+  Just like I was at your age
+  Just like my mother
+  And her mother...
+  flexbox is all we know child
+*/
+footer {
+  /*   here we use flexbox to center the content within (children) both vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #08cba8;
+  text-align: center;
+  padding: 20px 0px;
+  /*  Telling Footer how to behave as a flex child of body tag  */
+  flex: 0 1 40px;
+}
+
+/* MEDIA QUERIES */
+/* At around 750px the navbar becomes too 'busy'
+  We can use this breakpoint to transition to
+  a new style for smaller screens
+*/
+
+/* Screens wider than 750px need not apply
+  These are the rules we have for smaller screens
+*/
+@media (max-width: 750px) {
+  /*  Hide navbar. Losing space between links and logo  */
+  .nav-links {
+    display: none;
+  }
+
+  /*  Turn on container that has icon  */
+  #hamburger {
+    display: normal;
+    margin: 16px 0px;
+    font-size: x-large;
+  }
+
+  /*  Make text and placeholder stack  */
+  .call-to-action {
+    flex-direction: column;
+  }
+}
+
+
+/* Screens narrower than 750px need not apply */
+@media (min-width: 750px) {
+  /*  Make sure to hide any mobile related
+    content once screen is large enough for larger layout
+  */
+  #hamburger,
+  #sm-menu {
+    display: none;
+  }
+}

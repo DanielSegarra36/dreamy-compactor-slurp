@@ -1,0 +1,39 @@
+html, body {
+  margin: 0px;
+}
+
+.centered-lorem {
+  display: block;
+  width: 75vw;
+  margin: 0px auto;
+
+  font-style: italic;
+}
+
+.container { 
+  color: black;
+  background-color: teal;
+  height: 200px;
+  position: relative;
+  border: 3px solid #b73232; 
+}
+
+.absolute-center {
+  margin: 0;
+  background-color: aquamarine;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relative-pos-child {
+  height: 20%;
+  background-color: orange; 
+}
+
+/* @media (prefers-color-scheme: dark) {
+  .container {
+    color: black;
+  }
+} */

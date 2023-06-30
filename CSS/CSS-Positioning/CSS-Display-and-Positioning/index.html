@@ -1,0 +1,169 @@
+<!-- 
+  Formated using:
+  https://prettier.io/playground/
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>CSS Positioning: Absolute and Relative</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta name="color-scheme" content="dark light" />
+</head>
+
+<body>
+  <main>
+    <article class="display-properties">
+      <h1>Common Display Properties</h1>
+      <section class="display-inline-section">
+        <h2>display: in-line;</h2>
+        <p>
+          Inline items do not generate line breaks before or after themselves.
+          In normal flow, the next element will be on the same line if there
+          is space
+        </p>
+        <div class="display-inline box">we are inline items</div>
+        <div class="display-inline box">we are inline items</div>
+        <div class="display-inline box">we are inline items</div>
+        <div class="display-inline box">we are inline items</div>
+      </section>
+      <section class="display-block-section">
+        <h2>display: block;</h2>
+        <div class="display-block box">
+          this is a block display. it takes up this entire block of space. no
+          sharing<br />This format provides line breaks both before and after
+          the element when in the normal flow.<br /><strong>In other words it gets its own line and takes up the entire
+            space</strong>
+        </div>
+      </section>
+      <section class="display-none-section">
+        <h2>display: none;</h2>
+        <div class="display-none box">
+          this entire block can be removed from the page and hidden with
+          display: none;<br />Simply check this rule in the developer tools or
+          un-comment the "display: none;" line in the css
+        </div>
+      </section>
+    </article>
+
+    <hr />
+    <article class="positioning-elements">
+      <h1>POSITIONING ELEMENTS</h1>
+      <section class="position-static-section">
+        <h2>position: static;</h2>
+        <div class="position-static box">
+          This uses static positioning. This means that the element cannot be
+          repositioned. Its position is dictated by the flow of the document.
+          Where it is is where it is.
+        </div>
+      </section>
+      <section class="position-relative-section">
+        <h2>position: relative;</h2>
+        <div class="position-relative box">
+          Relative positioning means the element will be positioned in
+          relation to its natural position within the document.<br />You can
+          use top/bottom/left/right CSS rules to move an item all around.<br />Notice
+          this container is 50% from the left and -50px from the top (meaning
+          this goes above its natural place in the document)
+        </div>
+      </section>
+      <section class="position-fixed-section">
+        <h2>position: fixed;</h2>
+        <div>THE FIXED EXAMPLE IS AT THE
+          <div class="fixed-style box">BOTTOM RIGHT</div>
+        </div>
+        <p>
+          Fixed content is pinned to a coordinate on the view window. So if
+          you give a fixed element a bottom of -10px then that item will
+          always be pinned to the bottom view with 10px of the content just
+          below the view window
+        </p>
+        <div class="position-fixed box fixed-style" id="fixed-container">
+          this is fixed to one position
+        </div>
+      </section>
+      <section class="position-sticky-section">
+        <h2>position: sticky;</h2>
+        <p>
+          This is commonly used for navigation menus but can be used anywhere an item needs to stick. Notice the difference in behavior between sticky and fixed. Sticky items scroll/flow into their position whereas fixed items are always pinned to their position.
+        </p>
+        <div class="position-sticky box">
+          This will stick to the given position once it reaches it. Notice how
+          this element scrolls in and then sticks once it reaches the location specified in the CSS.
+        </div>
+      </section>
+      <section class="position-absolute">
+        <section class="position-absolute-relative-to-container">
+          <h2>position: absolute;</h2>
+          <h3>Absolute Positioning within a Container</h3>
+          <div class="parent box">
+            <p>
+              Use the CSS rules for "child" to see how absolute positioning
+              removes an element from the flow and pins it to a pixel
+              coordinate. There are extra rules written to demonstrate where the box can be placed.
+            </p>
+            <div class="child"></div>
+            box
+            <p>More text :D</p>
+          </div>
+        </section>
+        <section>
+          <h3 id="position-absolute-relative-to-body">Absolute Positioning with No Parent Container</h3>
+          <p>
+            If an absolute positioned element has no positioned ancestors, it
+            uses the document body, and moves along with page scrolling. It is
+            positioned within the initial view window. Therefore bottom: 0px; is
+            not the bottom of the
+          </p>
+          <div>
+            <div class="rogue-absolute rogue-absolute-style box" id="rogue-absolute">
+              <p>
+                This item has position: absolute; with no parent element with
+                any position rules. <a href="#position-absolute-relative-to-body">Go to section</a>
+              </p>
+            </div>
+          </div>
+          <p>
+            <strong>JUMP TO
+              <a href="#rogue-absolute" class="rogue-absolute-style">ABSOLUTE POSITION WITH NO POSITIONED PARENT</a></strong>
+          </p>
+        </section>
+        <section class="position-absolute-use-case">
+          <h2>Realistic Use Case of Absolute Positioning</h2>
+          <p>
+            Absolute positioning is usually used for artistic purposes. Such as
+            overlapping objects for visual appeal. It is not however recommended
+            to use for entire page layouts. Doing so will pin elements to pixel
+            coordinates on the screen. Therefore on smaller screens your content
+            will get cut off and not resize.
+          </p>
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <p class="card-content">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Tenetur nostrum quo est consequuntur, officia, ullam rem quae
+                dolor libero animi rerum perspiciatis. Nam quo, exercitationem
+                voluptas labore veniam nihil voluptatem.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- THANKS TO -->
+    </article>
+  </main>
+  <footer>
+    <p>
+      CSS Positioning: Position absolute and relative explained by Kevin
+      Powell
+      <sup><a href="https://www.youtube.com/watch?v=P6UgYq3J3Qs">[1]</a></sup>
+    </p>
+  </footer>
+</body>
+
+</html>

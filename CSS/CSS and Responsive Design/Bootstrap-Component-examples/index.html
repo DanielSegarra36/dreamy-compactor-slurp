@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Bootstrap</title>
+    <!--   FONT AWESOME ICONS   -->
+    <script
+      src="https://kit.fontawesome.com/4f7837e71c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--   BOOSTRAP ICONS   -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!--   BOOTSTRAP CDN   -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container">
+        <h1 class="text-center">A basic Grid with one row and three columns</h1>
+        <div class="row border">
+          <div class="col border text-lg-center">Column</div>
+          <div class="col border text-lg-center">Column</div>
+          <div class="col border text-lg-center">Column</div>
+        </div>
+        <h1 class="text-center">A basic Grid with one row and three columns</h1>
+        <div class="row border">
+          <div class="col-md border text-lg-center">Column</div>
+          <div class="col-md border text-lg-center">Column</div>
+          <div class="col-md border text-lg-center">Column</div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <h1 class="text-center">A navbar</h1>
+        <nav class="navbar navbar-expand-xxl navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNavDropdown"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-primary"
+                    aria-current="page"
+                    href="other.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="other.html"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown link
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container">
+        <div class="row g-5">
+          <h1 class="text-center">Basic grid with images</h1>
+          <p>here we've introduced "gutters" spacing/gap between rows</p>
+        </div>
+        <div class="row g-5">
+          <img
+            class="col-lg img-"
+            src="https://source.unsplash.com/random/300x300"
+            alt=""
+          />
+          <img
+            class="col-lg img-"
+            src="https://source.unsplash.com/random/300x300"
+            alt=""
+          />
+          <img
+            class="col-lg img-"
+            src="https://source.unsplash.com/random/300x300"
+            alt=""
+          />
+        </div>
+      </div>
+      <h1 class="text-center">Centered Image</h1>
+      <p>
+        here we center an image using the classes "mx-auto" and "d-block" which
+        stand sets the "x-axis margin" to "auto" and the "display" to "block"
+      </p>
+      <p>
+        auto margin on the x-axis means that the margin will grow to equal width
+        on both the left and right (x-axis)
+      </p>
+      <img
+        src="https://source.unsplash.com/random/300x300"
+        class="col rounded mx-auto d-block"
+        alt="..."
+      />
+
+      <h1 class="text-center">Floating Images Left and/or Right</h1>
+      <p>
+        here we push one image left and one right using just "float start/end".
+        We wrap this in another class "clearfix" to clear our display changes
+        after this block (necessary because of what float does).
+      </p>
+      <div class="clearfix">
+        <img
+          src="https://source.unsplash.com/random/300x300"
+          class="col rounded float-start"
+          alt="..."
+        />
+        <img
+          src="https://source.unsplash.com/random/300x300"
+          class="col rounded float-end"
+          alt="..."
+        />
+      </div>
+
+      <h1 class="text-center">Alignment</h1>
+      <p>"justify-content-[direction]" and "align-self-[direction]"</p>
+      <div
+        class="container border border-danger my-4 justify-content-center"
+        style="height:300px"
+      >
+        <div class="row h-100">
+          <div class="col border border-5 align-self-start">
+            One of three columns
+          </div>
+          <div class="col border border-5 align-self-center">
+            One of three columns
+          </div>
+          <div class="col border border-5 align-self-end">
+            One of three columns
+          </div>
+        </div>
+      </div>
+      <h1 class="text-center">Tables</h1>
+      <p></p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h1 class="text-center">Icons</h1>
+      <p></p>
+      <div class="d-flex justify-content-end align-items-center">
+        <p class="mx-2">
+          <a href="https://icons.getbootstrap.com/#install"
+            >add bootstrap icons</a
+          >
+        </p>
+        <i class="fs-1 bi bi-fingerprint"></i>
+        <p class="mx-2">
+          or <a href="https://fontawesome.com/start">font awesome icons</a>
+        </p>
+        <i class="fs-1 fa-solid fa-barcode"></i>
+        <i></i>
+      </div>
+
+      <h1 class="text-center">Accordion</h1>
+      <p></p>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Accordion Item #1
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is
+              shown by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Accordion Item #2
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Accordion Item #3
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-center">Carousel</h1>
+      <p></p>
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide w-50 mx-auto"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://source.unsplash.com/random/300x300"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://source.unsplash.com/random/300x300"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://source.unsplash.com/random/300x300"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h1 class="text-center">Modal</h1>
+      <p></p>
+
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Launch demo modal
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-4">.col-md-4</div>
+                  <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+                  <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-9">
+                    Level 1: .col-sm-9
+                    <div class="row">
+                      <div class="col-8 col-sm-6">
+                        Level 2: .col-8 .col-sm-6
+                      </div>
+                      <div class="col-4 col-sm-6">
+                        Level 2: .col-4 .col-sm-6
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------------------   BOOTSTRAP CDN   ------------------>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+      <!------------------   FONT AWESOME CDN   ------------------>
+      <script
+        src="https://kit.fontawesome.com/4f7837e71c.js"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
