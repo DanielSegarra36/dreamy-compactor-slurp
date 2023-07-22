@@ -1,0 +1,106 @@
+html, body {
+  margin: 50px 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(3rem, 2.5714rem + 3.4286vw, 4.5rem);
+}
+
+section:nth-child(even) {
+  background-color: #c4d0ff;
+}
+
+/**************        CAT/DOG FACT API          **************/
+.catFact, .dogFact {
+/*   width: 500px; */
+  margin: 50px auto;
+  text-align: center;
+  font-size: clamp(1.4rem, 1.1143rem + 2.2857vw, 2.4rem);
+}
+
+
+/**************        Lorem Picsum API          **************/
+.loremPicsumAPI {
+  margin: 0px auto;
+}
+.lpData {
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+.lpItem {
+  width: 300px;
+}
+
+.lpItem > img {
+  width:inherit;
+}
+
+
+
+/**************        GHIBLI API          **************/
+.ghibliData {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.ghibliMovieStats {
+  width: 300px;
+}
+
+.ghibliMovieStats > img {
+  width: inherit;
+}
+
+
+/************      Art Institute of Chicago API      ************/
+.articAPI > form > label {
+  font-size: clamp(1rem, 0.8857rem + 0.9143vw, 1.4rem);
+}
+.articAPI > form > input {
+  padding: 10px 15px;
+}
+.articAPI > form {
+  margin: 50px auto;
+  width: fit-content;
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.image-gallery {
+  display: flex;
+  /*  mobile first  */
+  flex-direction: column;
+  gap: 10px;
+  width: 70vw;
+  margin: 0px auto;
+}
+
+.image-gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-item img {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .image-gallery {
+    flex-direction: row;
+  }
+}

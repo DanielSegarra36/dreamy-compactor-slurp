@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <section class="catFactsAPI">
+    <h1>Cat Facts</h1>
+    <!--   Add a number input field for to use for the API request   -->
+    <div class="catFacts">
+    <!--    Use JavaScript to add into this section.    -->
+    </div>
+  </section>
+
+  <section class="dogFactsAPI">
+    <h1>Dog Facts</h1>
+    <!--   Add a number input field for to use for the API request   -->
+    <div class="dogFacts">
+    <!--    Use JavaScript to add into this section.    -->
+    </div>
+  </section>
+
+  <section class="loremPicsumAPI">
+    <h1>Lorem Picsum</h1>
+    <div class="lpData"></div>
+  </section>
+
+<!--   <section class="weatherAPI">
+    <h1>Weather API</h1>
+  </section>
+
+  <section class="disneyAPI">
+    <h1>Disney API</h1>
+    <div></div>
+  </section> -->
+
+  <section class="ghibliAPI">
+    <h1>Ghibli API</h1>
+    <div class="ghibliData"></div>
+  </section>
+
+  <section class="articAPI">
+    <h1>Art Institute of Chicago API</h1>
+    <form>
+      <label>Search Term</label>
+      <input type="text" id="keyword" placeholder="e.g. renaissance" />
+      <label>Amount</label>
+      <input type="number" id="amount" placeholder="e.g. 10" />
+      <button type="button" onclick="articAPISearchQuery()">Search</button>
+    </form>
+    <div class="loading">LOADING</div>
+    <div class="image-gallery">
+      <div class="column column1">
+        <!-- items here -->
+      </div>
+      <div class="column column2">
+        <!-- items here -->
+      </div>
+      <div class="column column3">
+        <!-- items here -->
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

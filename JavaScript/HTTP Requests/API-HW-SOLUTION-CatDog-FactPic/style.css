@@ -1,0 +1,24 @@
+/**************        CAT/DOG FACT API          **************/
+html, body {
+  margin: 50px 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(3rem, 2.5714rem + 3.4286vw, 4.5rem);
+}
+
+.catFacts img, .dogFacts img {
+  display: block;
+  margin: 50px auto;
+}
+
+.catFact, .dogFact {
+  margin: 50px auto;
+  text-align: center;
+  font-size: clamp(1.4rem, 1.1143rem + 2.2857vw, 2.4rem);
+}
+
+.dogPic {
+  max-width: 70vw;
+}
