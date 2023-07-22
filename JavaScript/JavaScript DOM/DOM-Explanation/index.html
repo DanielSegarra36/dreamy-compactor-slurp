@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to the DOM</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Document Object Model (DOM)</h1>
+  <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure
+    of a web page as a hierarchical tree of objects, allowing programs to interact with and modify the content,
+    structure, and style of the page.</p>
+
+  <h2>DOM Tree</h2>
+  <p>The DOM tree is a logical representation of the web page's structure. It consists of various types of nodes,
+    including:</p>
+  <ul>
+    <li>Document node: Represents the entire HTML document.</li>
+    <li>Element node: Represents HTML elements such as &lt;div&gt;, &lt;p&gt;, &lt;ul&gt;, etc.</li>
+    <li>Text node: Represents the text within an element.</li>
+    <li>Attribute node: Represents attributes of an element.</li>
+    <li>Comment node: Represents comment content within an HTML document.</li>
+  </ul>
+
+  <h2>Accessing DOM Elements</h2>
+  <p>You can access DOM elements using JavaScript. Here's an example:</p>
+  <pre><code>
+<span style="color: #c678dd">// Get an element by its ID</span>
+<span style="color: #61afef">const</span> elementById = document.getElementById(<span style="color: #e06c75">"myElementId"</span>);
+
+<span style="color: #c678dd">// Get elements by their tag name</span>
+<span style="color: #61afef">const</span> elementsByTag = document.getElementsByTagName(<span style="color: #e06c75">"p"</span>);
+
+<span style="color: #c678dd">// Get elements by their class name</span>
+<span style="color: #61afef">const</span> elementsByClass = document.getElementsByClassName(<span style="color: #e06c75">"myClassName"</span>);
+  </code></pre>
+
+  <h2>Modifying DOM Elements</h2>
+  <p>Once you have access to a DOM element, you can modify its properties, attributes, and content using JavaScript.
+    Here's an example:</p>
+  <pre><code>
+<span style="color: #c678dd">// Modify element text content</span>
+elementById.textContent = <span style="color: #e06c75">"New content"</span>;
+
+<span style="color: #c678dd">// Modify element style</span>
+elementById.style.color = <span style="color: #e06c75">"red"</span>;
+
+<span style="color: #c678dd">// Add or remove CSS classes</span>
+elementById.classList.add(<span style="color: #e06c75">"newClass"</span>);
+elementById.classList.remove(<span style="color: #e06c75">"oldClass"</span>);
+  </code></pre>
+
+  <h2>Events and Event Handling</h2>
+  <p>The DOM allows you to handle user interactions and events such as clicks, mouse movements, and keyboard input. You
+    can attach event listeners to DOM elements and define functions to be executed when events occur. Here's an example:
+  </p>
+  <pre><code>
+<span style="color: #c678dd">// Add a click event listener</span>
+elementById.addEventListener(<span style="color: #e06c75">"click"</span>, <span style="color: #61afef">function</span>(event) {
+  <span style="color: #c678dd">// Handle the click event here</span>
+  console.log(<span style="color: #e06c75">"Clicked!"</span>);
+});
+  </code></pre>
+
+  <h2>Conclusion</h2>
+  <p>The DOM is a powerful tool that enables dynamic manipulation of web pages. It provides a structured representation
+    of HTML documents, allowing developers to access, modify, and handle events on elements within the page. By
+    leveraging the DOM, you can create interactive and responsive web applications.</p>
+  <h1>Document Object Model (DOM)</h1>
+  <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure
+    of a web page as a hierarchical tree of objects, allowing programs to interact with and modify the content,
+    structure, and style of the page.</p>
+
+  <h2>DOM Tree</h2>
+  <p>The DOM tree is a logical representation of the web page's structure. It consists of various types of nodes,
+    including:</p>
+  <ul>
+    <li>Document node: Represents the entire HTML document.</li>
+    <li>Element node: Represents HTML elements such as &lt;div&gt;, &lt;p&gt;, &lt;ul&gt;, etc.</li>
+    <li>Text node: Represents the text within an element.</li>
+    <li>Attribute node: Represents attributes of an element.</li>
+    <li>Comment node: Represents comment content within an HTML document.</li>
+  </ul>
+
+  <h2>Accessing DOM Elements</h2>
+  <p>You can access DOM elements using JavaScript. Here's an example:</p>
+  <pre><code>
+// Get an element by its ID
+const elementById = document.getElementById("myElementId");
+
+// Get elements by their tag name
+const elementsByTag = document.getElementsByTagName("p");
+
+// Get elements by their class name
+const elementsByClass = document.getElementsByClassName("myClassName");
+  </code></pre>
+
+  <h2>Modifying DOM Elements</h2>
+  <p>Once you have access to a DOM element, you can modify its properties, attributes, and content using JavaScript.
+    Here's an example:</p>
+  <pre><code>
+// Modify element text content
+elementById.textContent = "New content";
+
+// Modify element style
+elementById.style.color = "red";
+
+// Add or remove CSS classes
+elementById.classList.add("newClass");
+elementById.classList.remove("oldClass");
+  </code></pre>
+
+  <h2>Events and Event Handling</h2>
+  <p>The DOM allows you to handle user interactions and events such as clicks, mouse movements, and keyboard input. You
+    can attach event listeners to DOM elements and define functions to be executed when events occur. Here's an example:
+  </p>
+  <pre><code>
+// Add a click event listener
+elementById.addEventListener("click", function(event) {
+  // Handle the click event here
+  console.log("Clicked!");
+});
+  </code></pre>
+
+  <h2>Conclusion</h2>
+  <p>The DOM is a powerful tool that enables dynamic manipulation of web pages. It provides a structured representation
+    of HTML documents, allowing developers to access, modify, and handle events on elements within the page. By
+    leveraging the DOM, you can create interactive and responsive web applications.</p>
+</body>
+
+</html>

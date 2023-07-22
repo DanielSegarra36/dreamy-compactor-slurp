@@ -1,0 +1,43 @@
+:root {
+ --blue: hsl(200, 100%, 50%) 
+}
+
+body {
+  margin: 0px;
+}
+
+nav,
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > ul {
+  list-style-type: none;
+  gap: 20px;
+}
+
+article {
+  width: 60vw;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.list-item {
+  padding: 5px 15px;
+  text-align: left;
+  list-style-type: none;
+  font-size: 2rem;
+  background-color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-modifiers {
+}
+
+input {
+  width: fit-content
+}

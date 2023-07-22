@@ -1,0 +1,29 @@
+body {
+  background-color: #282c34;
+  color: #abb2bf;
+  font-family: Consolas, monospace;
+  padding: 20px;
+}
+
+h1,
+h2,
+p {
+  color: #abb2bf;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+pre {
+  background-color: #1e2127;
+  color: #abb2bf;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: Consolas, monospace;
+}
