@@ -7,6 +7,7 @@
 nav {
   width: 100vw;
   height: 100vh;
+  overflow: hidden
 }
 
 ul {
@@ -24,7 +25,8 @@ li {
 li {
   list-style-type: none;
   flex: 1;
-  font-size: 2.5rem;
+  /*   font-size: clamp(1.2rem, 0.8579rem + 2.1895vw, 2.5rem); */
+  font-size: clamp(1.2rem, 0.6091rem + 3.7818vw, 2.5rem);
 }
 
 li a {
@@ -40,21 +42,25 @@ li a {
   /* Remove underline from anchor tags */
   color: black;
   /* Set the color for anchor tags */
+  transform: skewX(-5deg);
 }
 
-li:nth-child(1) {
+li:nth-child(1),
+li:nth-child(1)>a {
   background-color: rgb(205, 234, 101);
   /* background-color: maroon; */
   /* background-color: rgb(234, 136, 101); */
 }
 
-li:nth-child(2) {
+li:nth-child(2),
+li:nth-child(2)>a {
   background-color: rgb(52, 160, 225);
   /* background-color: blue; */
   /* background-color: rgb(100, 132, 206); */
 }
 
-li:nth-child(3) {
+li:nth-child(3),
+li:nth-child(3)>a {
   background-color: rgb(158, 120, 214);
   /* background-color: rgb(230, 214, 79); */
   /* background-color: rgb(227, 215, 111); */
