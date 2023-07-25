@@ -43,25 +43,70 @@ li a {
   color: black;
   /* Set the color for anchor tags */
   transform: skewX(-5deg);
+  transition: box-shadow 2s ease;
+}
+
+li:nth-child(1)>a:hover {}
+
+li>a:hover {
+  box-shadow: -10px 0px 5px 5px black;
 }
 
 li:nth-child(1),
 li:nth-child(1)>a {
-  background-color: rgb(205, 234, 101);
-  /* background-color: maroon; */
-  /* background-color: rgb(234, 136, 101); */
+  background-color: #cdea65;
+  /* background-color: blue; */
+  /* background-color: rgb(100, 132, 206); */
 }
 
 li:nth-child(2),
 li:nth-child(2)>a {
-  background-color: rgb(52, 160, 225);
+  background-color: #34a0e1;
   /* background-color: blue; */
   /* background-color: rgb(100, 132, 206); */
 }
 
 li:nth-child(3),
 li:nth-child(3)>a {
-  background-color: rgb(158, 120, 214);
+  /*   z-index: -1; */
+  background-color: #9e78d6;
   /* background-color: rgb(230, 214, 79); */
   /* background-color: rgb(227, 215, 111); */
+}
+
+
+/* STILL TESTING */
+a::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+a:hover {
+  /*  Comment  */
+}
+
+a:hover::after {
+  content: "";
+  position: absolute;
+  inset: -1rem;
+  filter: blur(2.5em);
+  z-index: -1;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+li:nth-child(1)>a:hover::after {
+  background: linear-gradient(to bottom right, #cdea65, 90%, #acd41d);
+}
+
+li:nth-child(2)>a:hover::after {
+  background: linear-gradient(to bottom right, #34a0e1, 80%, #a9d7f2);
+}
+
+li:nth-child(3)>a:hover::after {
+  background: linear-gradient(to bottom right, #9e78d6, 80%, #c2aae5);
 }
