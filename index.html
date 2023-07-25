@@ -13,10 +13,9 @@
       // Function to generate anchor tags for subdirectories
       function generateSubdirectoryAnchors() {
         const currentURL = window.location.href; // Get the current URL
-        const currentFolder = currentURL.substring(
-          0,
-          currentURL.lastIndexOf("/") + 1
-        );
+        const currentFolder =
+          currentURL.substring(0, currentURL.lastIndexOf("/") + 1) +
+          "dreamy-compactor-slurp/";
 
         // Function to extract subdirectory names from the current folder URL
         function getSubdirectories(url) {
