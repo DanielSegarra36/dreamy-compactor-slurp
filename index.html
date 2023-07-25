@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to Web Dev</title>
+  </head>
+  <body>
+    <!-- HTML code to display the generated anchor tags -->
+    <div id="subdirectories"></div>
+
+    <script>
+      // Function to generate anchor tags for subdirectories
+      function generateSubdirectoryAnchors() {
+        const currentURL = window.location.href; // Get the current URL
+        const currentFolder = currentURL.substring(
+          0,
+          currentURL.lastIndexOf("/") + 1
+        );
+
+        // Function to extract subdirectory names from the current folder URL
+        function getSubdirectories(url) {
+          const path = url.split("/");
+          const subdirectories = [];
+          for (let i = path.length - 2; i >= 0; i--) {
+            if (path[i] !== "") {
+              subdirectories.unshift(path[i]);
+            } else {
+              break;
+            }
+          }
+          return subdirectories;
+        }
+
+        const subdirectories = getSubdirectories(currentFolder);
+
+        const subdirectoryContainer = document.getElementById("subdirectories");
+        subdirectories.forEach((subdirectory) => {
+          const anchor = document.createElement("a");
+          anchor.href = `${currentFolder}${subdirectory}/index.html`;
+          anchor.textContent = `${subdirectory}/index.html`;
+          subdirectoryContainer.appendChild(anchor);
+          subdirectoryContainer.appendChild(document.createElement("br"));
+        });
+      }
+
+      // Call the function when the page loads
+      generateSubdirectoryAnchors();
+    </script>
+  </body>
+</html>
