@@ -1,0 +1,12 @@
+nav, ul {
+  width: 100vw;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
