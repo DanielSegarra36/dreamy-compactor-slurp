@@ -1,5 +1,5 @@
 // URL of the file containing words, one per line, in alphabetical order
-const wordListURL = ".txt";
+const wordListURL = "wordlist.txt";
 
 // Maximum number of incorrect guesses allowed
 const maxGuesses = 1;
