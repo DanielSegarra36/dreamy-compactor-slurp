@@ -44,7 +44,7 @@ function guess() {
   const input = document.getElementById("guess-input");
   const letter = input.value.toLowerCase();
 
-  if (!letter.match(/^[1-10]$/)) {
+  if (!letter.match(/^[a-zA-Z]$/)) {
     alert("Please enter a single letter from a to z.");
     return;
   }
