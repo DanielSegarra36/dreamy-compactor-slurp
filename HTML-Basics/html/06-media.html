@@ -3,22 +3,22 @@
   <head>
     <title>Media in HTML</title>
     <meta name="color-scheme" content="dark light" />
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body>
     <nav>
-    <h1>Intro to HTML</h1>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="01-head-tag.html">Head Tag</a></li>
-      <li><a href="02-text.html">Text</a></li>
-      <li><a href="03-comments.html">Comments</a></li>
-      <li><a href="04-header-main-footer.html">Header Main Footer</a></li>
-      <li><a href="05-article-section-div.html">Article</a></li>
-      <li><a href="06-media.html">Media</a></li>
-      <li><a href="../css/flexbox.html">Flexbox</a></li>
-    </ul>
-  </nav>
+      <h1>Intro to HTML</h1>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="01-head-tag.html">Head Tag</a></li>
+        <li><a href="02-text.html">Text</a></li>
+        <li><a href="03-comments.html">Comments</a></li>
+        <li><a href="04-header-main-footer.html">Header Main Footer</a></li>
+        <li><a href="05-article-section-div.html">Article</a></li>
+        <li><a href="06-media.html">Media</a></li>
+        <li><a href="../css/flexbox.html">Flexbox</a></li>
+      </ul>
+    </nav>
     <main>
       <article>
         <h1>Working with Images in HTML</h1>
@@ -94,8 +94,18 @@
           <h1>SVG</h1>
           <p>You can import an svg from figma as well!</p>
           <figure>
-            <img src="/assets/copy-as-svg.png" alt="an example of copying an item from Figma as an SVG to directly drop into your HTML." width="680">
-            <figcaption>Right click any object in Figma and you can copy it as an SVG. Simply copy and paste into you HTML.<em>(sadly this does not work in firefox at the moment, the app and chrome version work fine)</em></figcaption>
+            <img
+              src="/assets/copy-as-svg.png"
+              alt="an example of copying an item from Figma as an SVG to directly drop into your HTML."
+              width="680"
+            />
+            <figcaption>
+              Right click any object in Figma and you can copy it as an SVG.
+              Simply copy and paste into you HTML.<em
+                >(sadly this does not work in firefox at the moment, the app and
+                chrome version work fine)</em
+              >
+            </figcaption>
           </figure>
           <svg
             width="56"
@@ -110,6 +120,55 @@
             />
           </svg>
         </section>
+
+        <audio controls>
+          <source src="t-rex-roar.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <video controls width="640" height="360">
+          <source src="flower.webm" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+
+        <h2>canvas</h2>
+
+        <canvas id="drawingCanvas" width="400" height="200"></canvas>
+
+        <script>
+          const canvas = document.getElementById("drawingCanvas");
+          const ctx = canvas.getContext("2d");
+          let isDrawing = false;
+
+          function startDrawing(event) {
+            isDrawing = true;
+            ctx.beginPath();
+            ctx.moveTo(
+              event.clientX - canvas.offsetLeft,
+              event.clientY - canvas.offsetTop
+            );
+          }
+
+          function draw(event) {
+            if (isDrawing) {
+              ctx.lineTo(
+                event.clientX - canvas.offsetLeft,
+                event.clientY - canvas.offsetTop
+              );
+              ctx.stroke();
+            }
+          }
+
+          function stopDrawing() {
+            isDrawing = false;
+          }
+
+          // Event listeners to handle user input
+          canvas.addEventListener("mousedown", startDrawing);
+          canvas.addEventListener("mousemove", draw);
+          canvas.addEventListener("mouseup", stopDrawing);
+          canvas.addEventListener("mouseleave", stopDrawing);
+        </script>
       </article>
     </main>
   </body>
