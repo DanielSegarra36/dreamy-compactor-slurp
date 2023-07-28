@@ -13,11 +13,13 @@ body {
   background-image: url("https://source.unsplash.com/random/780x400/?space");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  top: 100px;
 }
 
 main {
-  position: relative;
-  top: 100px;
+  /*! position: relative; */
+  /*! top: 100px; */
   height: 50vh;
   width: 100vw;
   background-image: url("https://source.unsplash.com/random/800x800/?cat");
